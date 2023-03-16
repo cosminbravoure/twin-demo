@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
-    extend: {
-      colors: {
-        electric: "#db00ff",
-        ribbon: "#0047ff",
+    colors: {
+      brand: {
+        red: "#ff0020",
       },
+      white: "#ffffff",
+      black: "#222222",
     },
+    extend: {},
   },
   plugins: [],
 };
