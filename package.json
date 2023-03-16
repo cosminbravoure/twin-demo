@@ -12,7 +12,7 @@
   "unpkg": "./dist/twin-demo.umd.js",
   "babelMacros": {
     "twin": {
-      "preset": "styled-components"
+      "preset": "emotion"
     }
   },
   "dependencies": {
@@ -22,10 +22,9 @@
     "microbundle": "^0.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
-  },
-  "peerDependencies": {
-    "styled-components": "^5.3.9"
+    "react-scripts": "5.0.1",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0"
   },
   "devDependencies": {
     "tailwindcss": "^3.2.4",

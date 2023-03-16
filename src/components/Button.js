@@ -23,7 +23,7 @@ const Button = styled.button(({ variant, isSmall }) => [
 
   // The theme import can supply values from your tailwind.config.js
   css`
-    color: ${theme`colors.white`};
+    color: ${theme`colors.red.500`};
   `,
 ]);
 
