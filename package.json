@@ -2,20 +2,42 @@
   "name": "twin-demo",
   "version": "0.1.0",
   "private": true,
+  "source": "src/components/index.js",
+  "exports": {
+    "require": "./dist/twin-demo.cjs",
+    "default": "./dist/twin-demo.modern.js"
+  },
+  "main": "./dist/twin-demo.cjs",
+  "module": "./dist/twin-demo.module.js",
+  "unpkg": "./dist/twin-demo.umd.js",
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "microbundle": "^0.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1"
+  },
+  "peerDependencies": {
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4",
+    "twin.macro": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev:lib": "microbundle watch  --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
+    "build:lib": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react"
   },
   "eslintConfig": {
     "extends": [
